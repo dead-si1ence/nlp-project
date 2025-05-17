@@ -1,0 +1,8 @@
+pandas
+transformers
+tensorflow
+tf-keras
+hf_xet
+torch
+haystack-ai
+sentence-transformers
