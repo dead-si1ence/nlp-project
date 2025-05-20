@@ -215,17 +215,17 @@ def main() -> None:
     args = parser.parse_args()
 
     # Create the DocumentQA instance
-    qa_system = DocumentQA()
+    qaSystem = DocumentQA()
 
     # Execute the appropriate command
     if args.command == "upload":
-        result = qa_system.processDocument(args.file_path)
+        result = qaSystem.processDocument(args.file_path)
     elif args.command == "ask":
-        result = qa_system.askQuestion(args.question, args.top_k)
+        result = qaSystem.askQuestion(args.question, args.top_k)
     elif args.command == "list":
-        result = qa_system.listDocuments()
+        result = qaSystem.listDocuments()
     elif args.command == "reset":
-        result = qa_system.resetIndex()
+        result = qaSystem.resetIndex()
     else:
         parser.print_help()
         return

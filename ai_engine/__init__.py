@@ -11,4 +11,4 @@ This package provides functionality for:
 - Answering questions about documents
 """
 
-__version__ = "1.0.0"
+__version__ = "0.3.0"
