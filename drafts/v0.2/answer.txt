@@ -1,0 +1,79 @@
+{
+  "query": "What is LM?",
+  "answer": "",
+  "answer_score": 0.9535343050956726,
+  "source_document": {
+    "doc_id": "2adfaf2a-4a62-4e1d-b839-009a2ac5fd30",
+    "page": "30",
+    "chunk_id": 0,
+    "context": "\u2022 Update equation (in matrix notation):\n\u2022 Update equation (for single parameter):\n\u2022 Algorithm:\nGradient Descent\n\ud835\udefc = step size or learning rate\n31\n",
+    "info": {
+      "filename": "02-Lecture05-LM_RNN-Recorded.pdf",
+      "path": "/home/shush/dev/classes/YearFourSemesterTwo/Natuaral Language Processing/final-project/data/02-Lecture05-LM_RNN-Recorded.pdf",
+      "size": 3393200
+    }
+  },
+  "sources": [
+    {
+      "doc_id": "2adfaf2a-4a62-4e1d-b839-009a2ac5fd30",
+      "page": "19",
+      "chunk_id": 0,
+      "text": "Word2Vec: objective function\n20\nFor each position \ud835\udc61= 1, \u2026 , \ud835\udc47, predict context words within a window of fixed size m, \ngiven center word \ud835\udc64\ud835\udc61. Data likelihood:\n\ud835\udc3f\ud835\udf03= \u0dd1\n\ud835\udc61=1\n\ud835\udc47\n\u0dd1\n\u2212\ud835\udc5a\u2264\ud835\udc57\u2264\ud835\udc5a\n\ud835\udc57\u22600\n\ud835\udc43\ud835\udc64\ud835\udc61+\ud835\udc57| \ud835\udc64\ud835\udc61; \ud835\udf03\nThe objective function \ud835\udc3d\ud835\udf03 is the (average) negative log likelihood:\n\ud835\udc3d\ud835\udf03= \u22121\n\ud835\udc47log \ud835\udc3f(\ud835\udf03) = \u22121\n\ud835\udc47\u0dcd\n\ud835\udc61=1\n\ud835\udc47\n\u0dcd\n\u2212\ud835\udc5a\u2264\ud835\udc57\u2264\ud835\udc5a\n\ud835\udc57\u22600\nlog \ud835\udc43\ud835\udc64\ud835\udc61+\ud835\udc57| \ud835\udc64\ud835\udc61; \ud835\udf03\nMinimizing objective function \u27fa Maximizing predictive accuracy\nLikelihood =\n\ud835\udf03 is all variables \nto be optimized\nsometimes called a cost or loss function\n L is to predict the words around\n the t word, where the vector\n representations we give the words\nis the only parameter of the L\nso it is good to minimize J to predict words in the context of another word\nT is # of words , m size of the window, 5 for ex\n",
+      "score": 0.25506120920181274,
+      "info": {
+        "filename": "02-Lecture05-LM_RNN-Recorded.pdf",
+        "path": "/home/shush/dev/classes/YearFourSemesterTwo/Natuaral Language Processing/final-project/data/02-Lecture05-LM_RNN-Recorded.pdf",
+        "size": 3393200
+      }
+    },
+    {
+      "doc_id": "2adfaf2a-4a62-4e1d-b839-009a2ac5fd30",
+      "page": "30",
+      "chunk_id": 0,
+      "text": "\u2022 Update equation (in matrix notation):\n\u2022 Update equation (for single parameter):\n\u2022 Algorithm:\nGradient Descent\n\ud835\udefc = step size or learning rate\n31\n",
+      "score": 0.21855822205543518,
+      "info": {
+        "filename": "02-Lecture05-LM_RNN-Recorded.pdf",
+        "path": "/home/shush/dev/classes/YearFourSemesterTwo/Natuaral Language Processing/final-project/data/02-Lecture05-LM_RNN-Recorded.pdf",
+        "size": 3393200
+      }
+    },
+    {
+      "doc_id": "2adfaf2a-4a62-4e1d-b839-009a2ac5fd30",
+      "page": "22",
+      "chunk_id": 0,
+      "text": "Word2Vec: prediction function\n\ud835\udc43\ud835\udc5c\ud835\udc50=\nexp(\ud835\udc62\ud835\udc5c\ud835\udc47\ud835\udc63\ud835\udc50)\n\u03c3\ud835\udc64\u2208\ud835\udc49exp(\ud835\udc62\ud835\udc64\ud835\udc47\ud835\udc63\ud835\udc50)\n\u2022 This is an example of the softmax function \u211d\ud835\udc5b\u2192(0,1)\ud835\udc5b\nsoftmax \ud835\udc65\ud835\udc56=\nexp(\ud835\udc65\ud835\udc56)\n\u03c3\ud835\udc57=1\n\ud835\udc5b\nexp(\ud835\udc65\ud835\udc57) = \ud835\udc5d\ud835\udc56\n\u2022 The softmax function maps arbitrary values \ud835\udc65\ud835\udc56 to a probability distribution \ud835\udc5d\ud835\udc56\n\u2022 \u201cmax\u201d because amplifies probability of largest \ud835\udc65\ud835\udc56\n\u2022 \u201csoft\u201d because still assigns some probability to smaller \ud835\udc65\ud835\udc56\n\u2022 Frequently used in Deep Learning\n\u2460Dot product compares similarity of o and c.\n\ud835\udc62\ud835\udc47\ud835\udc63= \ud835\udc62\u22c5\ud835\udc63= \u03c3\ud835\udc56=1\n\ud835\udc5b\n\ud835\udc62\ud835\udc56\ud835\udc63\ud835\udc56\nLarger dot product = larger probability\n\u2462Normalize over entire vocabulary\nto give probability distribution\n23\n\u2461Exponentiation makes anything positive\nOpen \nregion\nBut sort of a weird name \nbecause it returns a distribution!\ndot product is similarity\npi is soft max distribution\n if different words have B components of the same sign, plus or\n minus, in the same positions, then the dot product will be big,\n and if the B components are of different signs then the dot\nproduct will be small\n",
+      "score": 0.191672220826149,
+      "info": {
+        "filename": "02-Lecture05-LM_RNN-Recorded.pdf",
+        "path": "/home/shush/dev/classes/YearFourSemesterTwo/Natuaral Language Processing/final-project/data/02-Lecture05-LM_RNN-Recorded.pdf",
+        "size": 3393200
+      }
+    },
+    {
+      "doc_id": "2adfaf2a-4a62-4e1d-b839-009a2ac5fd30",
+      "page": "23",
+      "chunk_id": 0,
+      "text": "To train the model: Optimize value of parameters to minimize loss\n31\nTo train a model, we gradually adjust parameters to minimize a loss\n\u2022 Recall: \ud835\udf03 represents all the\nmodel parameters, in one\nlong vector\n\u2022 In our case, with\nd-dimensional vectors and\nV-many words, we have \u2192\n\u2022 Remember: every word has\ntwo vectors\n\u2022 We optimize these parameters by walking down the gradient (see right figure)\n\u2022 We compute all vector gradients!\nif there are a 100 dimensional word representation, then they're sort of a 100 parameters of aardvark and context, etc\n",
+      "score": 0.16741640865802765,
+      "info": {
+        "filename": "02-Lecture05-LM_RNN-Recorded.pdf",
+        "path": "/home/shush/dev/classes/YearFourSemesterTwo/Natuaral Language Processing/final-project/data/02-Lecture05-LM_RNN-Recorded.pdf",
+        "size": 3393200
+      }
+    },
+    {
+      "doc_id": "2adfaf2a-4a62-4e1d-b839-009a2ac5fd30",
+      "page": "24",
+      "chunk_id": 0,
+      "text": "Interactive Session!\n25\n\u2022 \ud835\udc3f\ud835\udf03= \u03c2\ud835\udc61=1\n\ud835\udc47\n\u03c2\u2212\ud835\udc5a\u2264\ud835\udc57\u2264\ud835\udc5a\n\ud835\udc57\u22600\n\ud835\udc43\ud835\udc64\ud835\udc61+\ud835\udc57 | \ud835\udc64\ud835\udc61; \ud835\udf03\n\u2022 For a center word c and a context word o:   \ud835\udc43\ud835\udc5c\ud835\udc50=\nexp(\ud835\udc62\ud835\udc5c\ud835\udc47\ud835\udc63\ud835\udc50)\n\u03c3\ud835\udc64\u2208\ud835\udc49exp(\ud835\udc62\ud835\udc64\n\ud835\udc47\ud835\udc63\ud835\udc50)\n",
+      "score": 0.16597811877727509,
+      "info": {
+        "filename": "02-Lecture05-LM_RNN-Recorded.pdf",
+        "path": "/home/shush/dev/classes/YearFourSemesterTwo/Natuaral Language Processing/final-project/data/02-Lecture05-LM_RNN-Recorded.pdf",
+        "size": 3393200
+      }
+    }
+  ],
+  "success": true
+}
